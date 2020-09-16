@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#author: claro
+#author: hyraxai
 #date: 2020-09-15
 #verion: 2.0
 
