@@ -225,7 +225,7 @@ while [[ -z $createJob ]]; do
             createJob=done
     elif [[ ! -z ${compressionFactor} && -z ${preset} && ! -z ${speed} ]]; then
             printf "[-] Option 3 Selected with CRF=$compressionFactor and no Preset and Frame Rate=$frameRate\n"
-            ffmpeg -i $preparedTransportStreamIn -c:v libx264 -filter:v "setpts=$frameRate*PTS" -crf $compressionFactor $finalProduct
+            ffmpeg -i $preparedTransportStreamIn -c:v libx264 -filter:v "setpts=$frameRate*PTS" -crf $compressionFactor $finalProduct 2>>./$dirTime/tmp/mux.log
             createJob=done
     elif [[ -z ${preset} && -z ${compressionFactor} && ! -z ${speed} ]]; then
             printf "[-] Option 4 Selected with no CRF and no Preset and Frame Rate=$frameRate\n"
